@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -94,8 +94,8 @@
   @apply flex items-center justify-center;
 }
 
-@utility text-gradient {
-  @apply to-blue bg-gradient-to-b from-white via-white bg-clip-text font-semibold text-transparent;
+@utility text-linear {
+  @apply to-blue bg-linear-to-b from-white via-white bg-clip-text font-semibold text-transparent;
 }
 
 @utility glass {
@@ -111,25 +111,6 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  main {
-    @apply mx-auto container flex flex-col sm:px-10 px-5 py-10;
-  }
-
-  h1 {
-    @apply text-gradient text-6xl font-semibold max-sm:text-4xl;
-  }
-
-  h3 {
-    @apply font-schibsted-grotesk text-2xl font-bold;
-  }
-
-  ul {
-    @apply list-disc list-inside;
-  }
 }
 
 @layer components {
@@ -139,61 +120,7 @@
     }
   }
 
-  #explore-btn {
-    @apply border-dark-200 bg-dark-100 flex w-fit cursor-pointer  rounded-full border px-8 py-3.5 max-sm:w-full text-center;
-
-    a {
-      @apply flex-center gap-2 text-center w-full;
-    }
-  }
-
-  header {
-    @apply glass sticky top-0 z-50;
-
-    nav {
-      @apply flex flex-row justify-between mx-auto container sm:px-10 px-5 py-4;
-    }
-
-    .logo {
-      @apply flex flex-row items-center gap-2;
-
-      p {
-        @apply text-xl font-bold italic max-sm:hidden;
-      }
-    }
-
-    ul {
-      @apply flex flex-row items-center gap-6;
-    }
-  }
-
-  .events {
-    @apply grid md:grid-cols-3 gap-10 sm:grid-cols-2 grid-cols-1;
-  }
-
-  #event-card {
-    @apply flex flex-col gap-3;
-
-    .poster {
-      @apply h-[300px] w-full rounded-lg object-cover;
-    }
-
-    .title {
-      @apply text-[20px] font-semibold line-clamp-1;
-    }
-
-    p {
-      @apply text-light-200 text-sm font-light;
-    }
-
-    .datetime {
-      @apply text-light-200 flex flex-row flex-wrap items-center gap-4;
-
-      div {
-        @apply flex flex-row gap-2;
-      }
-    }
-  }
+  
 
   #event {
     .header {
